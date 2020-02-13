@@ -18,11 +18,31 @@ def Binary_Search(A, to_find):
       Binary_Search(A[0:mid], to_find)
 
 
+def Merge_Sort(A):
+  if not A:
+    print("Empty Array provided as input")
+  
+  if (len(A) < 4):
+    sorted(A)
+
+  else:
+    mid = len(A)//2
+    first_half = Merge_Sort(A[0:mid])
+    second_half = Merge_Sort(A[mid+1:len(A)])
+
+
+
+
+
 
 def main():
-  sample = [1,2,3,4,5,6]
-  Binary_Search(sample, 3)
 
+  #For Search Algo only
+  sample_1 = [1,2,3,4,5,6]
+  Binary_Search(sample_1, 3)
+
+  sample_2 = [6,5,4,3,2,1,0]
+  Merge_Sort(sample_2)
 
 
 if __name__ == '__main__':
