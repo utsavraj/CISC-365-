@@ -33,6 +33,30 @@ def Merge_Sort(A):
 
 
 
+#Used as a pivot to sort everything arround it. 
+def Partition(A):
+
+
+
+
+
+
+def Quick_Sort(A):
+  if not A:
+    print("Empty Array provided as input")
+
+  if (len(A) < 4):
+    sorted(A)
+
+  else:
+    q = Partition(A)
+    first_half = Quick_Sort(A[0:q - 1])
+    second_half = Quick_Sort(A[q + 1:len(A)])
+
+
+
+
+
 
 
 def main():
@@ -41,9 +65,10 @@ def main():
   sample_1 = [1,2,3,4,5,6]
   Binary_Search(sample_1, 3)
 
+  #For Sort Algo only
   sample_2 = [6,5,4,3,2,1,0]
   Merge_Sort(sample_2)
-
+  Quick_Sort(sample_2)
 
 if __name__ == '__main__':
     main()
